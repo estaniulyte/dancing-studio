@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/dancing-studio/static/css/main.7394adcc.css",
+    "main.js": "/dancing-studio/static/js/main.1c25d29c.js",
+    "static/media/laptop.jpeg": "/dancing-studio/static/media/laptop.45ddf500e572fb2f1d35.jpeg",
+    "static/media/single.png": "/dancing-studio/static/media/single.20196aa3e7e7fa48f8f7.png",
+    "static/media/double.png": "/dancing-studio/static/media/double.8be045e6bb88be63d414.png",
+    "static/media/triple.png": "/dancing-studio/static/media/triple.4eb8f19f4b4647321484.png",
+    "index.html": "/dancing-studio/index.html",
+    "main.7394adcc.css.map": "/dancing-studio/static/css/main.7394adcc.css.map",
+    "main.1c25d29c.js.map": "/dancing-studio/static/js/main.1c25d29c.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7394adcc.css",
+    "static/js/main.1c25d29c.js"
+  ]
+}
