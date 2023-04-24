@@ -8,6 +8,92 @@ import {
 } from 'react-icons/fa'
 
 const Footer = () => {
+  const titles = [
+    {
+      title: 'Solutions',
+      elements: [
+        {
+          name: "Analytics",
+          link: "/"
+        },
+        {
+          name: "Marketing",
+          link: "/"
+        },
+        {
+          name: "Commerce",
+          link: "/"
+        },
+        {
+          name: "Insights",
+          link: "/"
+        }
+      ]
+    },
+    {
+      title: 'Support',
+      elements: [
+        {
+          name: "Pricing",
+          link: "/"
+        },
+        {
+          name: "Documentation",
+          link: "/"
+        },
+        {
+          name: "Guides",
+          link: "/"
+        },
+        {
+          name: "API Status",
+          link: "/"
+        }
+      ]
+    },
+    {
+      title: 'Company',
+      elements: [
+        {
+          name: "About",
+          link: "/"
+        },
+        {
+          name: "Blog",
+          link: "/"
+        },
+        {
+          name: "Jobs",
+          link: "/"
+        },
+        {
+          name: "Press",
+          link: "/"
+        },
+        {
+          name: "Careers",
+          link: "/"
+        }
+      ]
+    },
+    {
+      title: 'Legal',
+      elements: [
+        {
+          name: "Claim",
+          link: "/"
+        },
+        {
+          name: "Policy",
+          link: "/"
+        },
+        {
+          name: "Terms",
+          link: "/"
+        }
+      ]
+    }
+  ]
   return (
     <div className="max-w-[1420px] mx-auto py-16 px-4 grid lg:grid-cols-3 gap-8 text-gray-300">
       <div>
@@ -22,42 +108,26 @@ const Footer = () => {
         </div>
       </div>
       <div className="lg:col-span-2 flex justify-between mt-6">
-        <div>
-          <h6 className="font-medium text-gray-400">Solutions</h6>
-          <ul>
-            <li className="py-2 text-sm"><a href="/">Analytics</a></li>
-            <li className="py-2 text-sm">Marketing</li>
-            <li className="py-2 text-sm">Commerce</li>
-            <li className="py-2 text-sm">Insights</li>
-          </ul>
-        </div>
-        <div>
-          <h6 className="font-medium text-gray-400">Support</h6>
-          <ul>
-            <li className="py-2 text-sm">Pricing</li>
-            <li className="py-2 text-sm">Documentation</li>
-            <li className="py-2 text-sm">Guides</li>
-            <li className="py-2 text-sm">API Status</li>
-          </ul>
-        </div>
-        <div>
-          <h6 className="font-medium text-gray-400">Company</h6>
-          <ul>
-            <li className="py-2 text-sm">About</li>
-            <li className="py-2 text-sm">Blog</li>
-            <li className="py-2 text-sm">Jobs</li>
-            <li className="py-2 text-sm">Press</li>
-            <li className="py-2 text-sm">Careers</li>
-          </ul>
-        </div>
-        <div>
-          <h6 className="font-medium text-gray-400">Legal</h6>
-          <ul>
-            <li className="py-2 text-sm">Claim</li>
-            <li className="py-2 text-sm">Policy</li>
-            <li className="py-2 text-sm">Terms</li>
-          </ul>
-        </div>
+        {titles?.map((item) => {
+            return (
+             <div>
+                <h6 className="font-medium text-gray-400">
+                  { item.title }
+                </h6>
+                <ul>
+                  {item?.elements.map((item) => {
+                    return (
+                      <li className="py-2 text-sm">
+                        <a href={item.link}>
+                          { item.name }
+                        </a>
+                      </li>
+                    );
+                  })}
+                </ul>
+             </div>
+            );
+          })}
       </div>
     </div>
   )
