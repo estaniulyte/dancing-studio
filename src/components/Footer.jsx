@@ -118,7 +118,7 @@ const Footer = () => {
                   {item?.elements.map((item) => {
                     return (
                       <li className="py-2 text-sm">
-                        <a href={item.link}>
+                        <a className="hover:text-[#00df9a]" href={item.link}>
                           { item.name }
                         </a>
                       </li>
